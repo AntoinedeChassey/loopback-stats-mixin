@@ -12,7 +12,7 @@ Thanks to these 2 mixins we can create a full set of services that can automatic
 #### INSTALL
 
 ```bash
-  npm install loopback-stats-mixin --save
+  npm install loopback3-stats-mixin --save
 ```
 #### MIXINSOURCES
 
