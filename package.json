@@ -25,9 +25,9 @@
   "license": "MIT",
   "dependencies": {
     "babel-runtime": "6.3.13",
-    "async": "2.0.0-rc.2",
-    "moment": "2.12.0",
-    "util": "0.10.3"
+    "async": ">=2.6.1",
+    "moment": ">=2.22.2",
+    "util": ">=0.11.0"
   },
   "devDependencies": {
     "babel-core": "^6.1.21",
@@ -43,8 +43,8 @@
     "gulp": "^3.9.0",
     "gulp-babel": "^6.1.0",
     "gulp-sourcemaps": "^1.6.0",
-    "loopback": "2.x",
-    "loopback-boot": "2.x",
+    "loopback": ">=3.x",
+    "loopback-boot": ">=3.x",
     "mocha": "^2.3.4"
   }
 }

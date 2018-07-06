@@ -127,8 +127,8 @@ describe('Loopback Stats Mixin (Model Mode)', () => {
   }));
   // It verifies the stast structure in custom range
   it('4 verifies for custom stats structure length and results', () => Order.stats('custom', {
-    start: moment(now.toISOString()).subtract(2, 'days').toISOString(),
-    end: now.toISOString()
+    start: moment(nowISO).subtract(2, 'days').toISOString(),
+    end: nowISO
   }).then(stats => {
     assert.equal(stats.length, 3);
     assert.equal(stats.pop().count, 1);
@@ -138,8 +138,8 @@ describe('Loopback Stats Mixin (Model Mode)', () => {
   }));
   // It verifies the where statement works correctly
   it('5 verifies for custom stats with where statement 1', () => Order.stats('custom', {
-    start: moment(now.toISOString()).subtract(2, 'days').toISOString(),
-    end: now.toISOString()
+    start: moment(nowISO).subtract(2, 'days').toISOString(),
+    end: nowISO
   }, { type : 'international' }).then(stats => {
     assert.equal(stats.length, 3);
     assert.equal(stats.pop().count, 0);
