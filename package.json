@@ -1,5 +1,5 @@
 {
-  "name": "@antoine-de-chassey/loopback-stats-mixin",
+  "name": "loopback3-stats-mixin",
   "version": "1.0.0",
   "author": "Antoine de Chassey / Jonathan Casarrubias <http://github.com/jonathan-casarrubias>",
   "description": "A mixin to provide statistical functionallity for Loopback Models, Relations and Nested Datasets",
