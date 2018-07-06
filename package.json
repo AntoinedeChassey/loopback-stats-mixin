@@ -1,5 +1,5 @@
 {
-  "name": "loopback3-stats-mixin",
+  "name": "loopback3-rt-stats-mixin",
   "version": "1.0.0",
   "author": "Antoine de Chassey / Jonathan Casarrubias <http://github.com/jonathan-casarrubias>",
   "description": "A mixin to provide statistical functionallity for Loopback Models, Relations and Nested Datasets",
@@ -20,7 +20,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/AntoinedeChassey/loopback-stats-mixin.git"
+    "url": "https://github.com/AntoinedeChassey/loopback3-rt-stats-mixin.git"
   },
   "license": "MIT",
   "dependencies": {
