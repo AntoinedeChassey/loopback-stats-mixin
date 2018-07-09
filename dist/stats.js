@@ -93,7 +93,7 @@ exports.default = function (Model, ctx) {
             break;
           case 'relation':
             Model.findOne(query, function (err, instance) {
-              if (err) return err;
+              if (err) console.error(err);
               var builder = new _queryBuilder2.default({
                 type: ctx.type,
                 count: ctx.count,
