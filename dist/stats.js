@@ -93,25 +93,29 @@ exports.default = function (Model, ctx) {
             break;
           case 'relation':
             Model.findOne(query, function (err, instance) {
-              if (err) console.error(err);
-              var builder = new _queryBuilder2.default({
-                type: ctx.type,
-                count: ctx.count,
-                now: ctx.now,
-                nowISOString: ctx.nowISOString,
-                params: {
-                  range: ctx.params.range,
-                  where: ctx.params.where,
-                  custom: ctx.params.custom
-                }
-              });
-              builder.onComplete(function (_err, _query) {
-                if (_err) return next(_err);
-                instance[ctx.relation || ctx.params.relation](_query, next);
-              });
-              builder.build();
+              if (err) {
+                next(err);
+                break;
+              } else {
+                var builder = new _queryBuilder2.default({
+                  type: ctx.type,
+                  count: ctx.count,
+                  now: ctx.now,
+                  nowISOString: ctx.nowISOString,
+                  params: {
+                    range: ctx.params.range,
+                    where: ctx.params.where,
+                    custom: ctx.params.custom
+                  }
+                });
+                builder.onComplete(function (_err, _query) {
+                  if (_err) return next(_err);
+                  instance[ctx.relation || ctx.params.relation](_query, next);
+                });
+                builder.build();
+                break;
+              }
             });
-            break;
           case 'nested':
             Model.findOne(query, function (err, instance) {
               return next(err, instance[ctx.nested]);
